@@ -6,7 +6,7 @@
 /**
  * @brief Represents a project file
  * 
- * Represents an abstract project file for the buildsystem.
+ * Represents a project file for the buildsystem.
  */
 class project_file
 {
@@ -14,8 +14,7 @@ private:
     std::filesystem::path _path;
     std::filesystem::file_time_type _last_write; 
 public:
-    project_file(std::filesystem::path);
+    explicit project_file(std::filesystem::path);
     ~project_file();
 };
-
 #endif

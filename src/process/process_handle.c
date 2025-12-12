@@ -1,3 +1,5 @@
+#include "process/process_handle.h"
+
 #if defined _WIN32 || _WIN64
 #include <process.h>
 #elif defined unix || __unix || __unix__
@@ -6,9 +8,8 @@
 #include <sys/wait.h>
 #endif
 
-#include "process/process_handle.h"
 
-int start_synched_process(char * argv[])
+int start_sync_process(char * argv[])
 {
     int exit_status;
 #if defined _WIN32 || _WIN64

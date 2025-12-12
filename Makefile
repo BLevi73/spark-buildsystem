@@ -3,8 +3,8 @@ CXX := g++
 CC  := gcc
 
 # Flags
-CXXFLAGS := -Wall -Wextra -std=c++23 -Iinclude
-CFLAGS   := -Wall -Wextra -std=c23 -Iinclude
+CXXFLAGS := -Wall -Werror -std=c++23 -Iinclude
+CFLAGS   := -Wall -Werror -std=c23 -Iinclude
 
 # Directories
 SRC_DIR := src
@@ -53,3 +53,11 @@ clean-all: clean
 # Build and run
 run: all
 	./$(TARGET)
+
+# Build and debug
+debug: all
+	gdb ./$(TARGET)
+
+# Build and run with valgrind
+memcheck: all
+	valgrind ./$(TARGET)

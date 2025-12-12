@@ -14,11 +14,11 @@ extern "C" {
  * 
  * Starts a synchronized process using the operating system's
  * native method. argv[0] contains the program to launch,
- * and is followed by the arguments passed to the program, terminated
- * by a NULL element at the end of the array.
+ * and is followed by the arguments passed to the program.
  * 
+ * @note argv[] must be a NULL-terminated array.
  */
-int start_synched_process(char * argv[]);
+int start_sync_process(char * argv[]);
 
 #ifdef __cplusplus
 }
