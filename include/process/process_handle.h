@@ -13,7 +13,8 @@ extern "C" {
  * @return the exit status of the child process
  * 
  * Starts a synchronized process using the operating system's
- * native method. argv[0] contains the program to launch,
+ * native function (e.g. execvp() on Unix-like operating systems).
+ * argv[0] contains the program to launch,
  * and is followed by the arguments passed to the program.
  * 
  * @note argv[] must be a NULL-terminated array.
