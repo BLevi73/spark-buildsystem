@@ -7,8 +7,9 @@
 class c_compiler final : public generic_compiler
 {
 public:
+    c_compiler() noexcept;
     c_compiler(std::string name);
-    virtual ~c_compiler() = default;
+    ~c_compiler();
 
     void compile_source_file(c_source_file source_file);
 };

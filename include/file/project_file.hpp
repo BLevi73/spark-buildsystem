@@ -5,17 +5,18 @@
 
 /**
  * @brief Represents a project file
- * 
+ *
  * Represents a project file for the buildsystem.
  */
 class project_file
 {
 private:
     std::filesystem::path _path;
-    std::filesystem::file_time_type _last_write; 
+    std::filesystem::file_time_type _last_write;
+
 public:
     explicit project_file(std::filesystem::path);
-    virtual ~project_file() = 0;
+    ~project_file();
 
     std::filesystem::path get_path();
     std::filesystem::file_time_type get_last_write();

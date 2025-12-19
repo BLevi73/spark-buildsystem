@@ -7,7 +7,7 @@ class c_source_file final : public project_file
 {
 public:
     explicit c_source_file(std::filesystem::path);
-    virtual ~c_source_file() = default;
+    ~c_source_file();
 };
 
 #endif

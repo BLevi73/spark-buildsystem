@@ -9,8 +9,9 @@ class generic_compiler
     std::string _name;
     std::vector<std::string> _flags;
 public:
+    generic_compiler() noexcept;
     generic_compiler(std::string name);
-    virtual ~generic_compiler() = 0;
+    ~generic_compiler();
 
     std::string get_name();
     std::vector<std::string> get_flags();

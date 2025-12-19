@@ -7,8 +7,9 @@
 class cxx_compiler final : public generic_compiler
 {
 public:
+    cxx_compiler() noexcept;
     cxx_compiler(std::string name);
-    virtual ~cxx_compiler() = default;
+    ~cxx_compiler();
 
     void compile_source_file(cxx_source_file source_file);
 };

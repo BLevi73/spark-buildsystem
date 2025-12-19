@@ -2,7 +2,11 @@
 
 #include <exception>
 
+generic_compiler::generic_compiler() noexcept {}
+
 generic_compiler::generic_compiler(std::string name) : _name(name) {}
+
+generic_compiler::~generic_compiler() {}
 
 std::string generic_compiler::get_name()
 {

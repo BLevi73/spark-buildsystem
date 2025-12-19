@@ -1,4 +1,0 @@
-#ifndef ARGUMENT_PARSER_HPP
-#define ARGUMENT_PARSER_HPP
-
-#endif

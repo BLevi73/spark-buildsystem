@@ -12,7 +12,7 @@ OBJ_DIR := obj
 BIN_DIR := bin
 
 # Executable name
-TARGET := $(BIN_DIR)/app
+TARGET := $(BIN_DIR)/spark-build
 
 # Find all source files recursively
 CPP_SRC := $(shell find $(SRC_DIR) -name '*.cpp')
