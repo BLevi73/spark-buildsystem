@@ -3,17 +3,18 @@
 
 #include <string>
 #include <vector>
-#include <filesystem>
 
 class generic_compiler
 {
-    std::filesystem::path _name;
+    std::string _name;
     std::vector<std::string> _flags;
 public:
     generic_compiler(std::string name);
     virtual ~generic_compiler() = 0;
 
-    void add_flag(std::string flag);
+    std::string get_name();
+    std::vector<std::string> get_flags();
+    void add_flag(std::string&& flag);
 };
 
 #endif

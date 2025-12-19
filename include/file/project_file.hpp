@@ -15,6 +15,9 @@ private:
     std::filesystem::file_time_type _last_write; 
 public:
     explicit project_file(std::filesystem::path);
-    ~project_file();
+    virtual ~project_file() = 0;
+
+    std::filesystem::path get_path();
+    std::filesystem::file_time_type get_last_write();
 };
 #endif

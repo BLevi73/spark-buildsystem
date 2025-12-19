@@ -7,8 +7,6 @@
 namespace project_builder
 {
     void generate_project(std::string project_name);
-
-    void fix_folder_structure();
 };
 
 #endif
